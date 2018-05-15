@@ -1,0 +1,5 @@
+1. «–ªªµΩroot
+2.  ‰»Î /etc/init.d/atd restart
+3. chkconfig --level 35 atd on
+4. . /etc/profile
+5. ÷¥––at√¸¡Ó

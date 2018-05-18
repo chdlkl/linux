@@ -15,5 +15,9 @@ ls /bin /usr/bin | sort | uniq | wc -l
 4. 打印匹配行grep
 eg: 从列出的程序中搜出文件名中包含zip的所有文件
 ls /bin /usr/bin | sort | uniq | grep zip
+grep zip默认是区分大小写
+grep -i zip 忽略大小写
+grep -v zip 输出和模式不匹配的行
+
 er: 或者在文件中搜索关键字和所在的行数
 grep "keywords" -n filename  其中keywords加不加双引号效果相同

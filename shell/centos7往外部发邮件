@@ -1,0 +1,13 @@
+1. 用root账户编辑/etc/mail.rc信息
+2. 打开mail.rc文件后，在文件末尾添加下面语句
+set from=username@163.com smtp=smtp.163.com
+set smtp-auth-user=username smtp-auth-password=password
+set smtp-auth=login
+# 要注意下面几点
+# 1) username为你自己163邮箱的账户
+# 2) smtp-auth-password=password等号右边的password不是你163邮箱的密码，而是开启163邮箱的POP3/SMTP/IMAP功能时的授权码，不是登陆密码
+# 3) 其余信息按上面填写并保存即可
+3. 登陆网页163邮箱，在“设置”中开启POP3/SMTP/TMAP功能。在此步骤会设置授权码
+4. 发送邮件
+# 1) mail -s "test" yourQQ@qq.com < test.txt
+# 2) echo "this is a test mail from linux" | mail -s "test" username@163.com yourQQ@qq.com # 注意邮箱之间用空格隔开

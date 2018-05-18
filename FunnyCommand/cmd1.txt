@@ -1,0 +1,19 @@
+1. 过滤器sort
+eg: 假设要把/bin和/usr/bin目录下的所有可执行程序合并成一个列表，并按照顺序排列
+ls /bin /usr/bin | sort | less
+
+2. 报告或忽略文件中重复的行uniq
+eg: 默认情况下，改命令删除列表中的所有重复行(即在/bin和/usr/bin目录下都出现的相同名字的任意程序)
+ls /bin /usr/bin | sort | uniq | less
+
+3. 打印行数、字数和字节数
+行数：wc -l  
+字数：wc -m
+字节数：wc -c
+ls /bin /usr/bin | sort | uniq | wc -l
+
+4. 打印匹配行grep
+eg: 从列出的程序中搜出文件名中包含zip的所有文件
+ls /bin /usr/bin | sort | uniq | grep zip
+er: 或者在文件中搜索关键字和所在的行数
+grep "keywords" -n filename  其中keywords加不加双引号效果相同
